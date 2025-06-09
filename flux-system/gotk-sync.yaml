@@ -16,6 +16,28 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: applications
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  retryInterval: 2m0s
+  timeout: 5m0s
+  path: ./clusters/home/6-applications
+  dependsOn:
+    - name: core
+    - name: flux-repositories
+    - name: core-releases
+    - name: releases
+    - name: infrastructure
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: infrastructure
   namespace: flux-system
 spec:
