@@ -24,10 +24,6 @@ spec:
   timeout: 5m0s
   path: ./clusters/home/6-applications
   dependsOn:
-    - name: core
-    - name: flux-repositories
-    - name: core-releases
-    - name: releases
     - name: infrastructure
   prune: true
   wait: true
@@ -46,9 +42,6 @@ spec:
   timeout: 5m0s
   path: ./clusters/home/5-infrastructure
   dependsOn:
-    - name: core
-    - name: flux-repositories
-    - name: core-releases
     - name: releases
   prune: true
   wait: true
@@ -67,8 +60,6 @@ spec:
   timeout: 5m0s
   path: ./clusters/home/4-releases
   dependsOn:
-    - name: core
-    - name: flux-repositories
     - name: core-releases
   prune: true
   wait: true
@@ -87,7 +78,6 @@ spec:
   timeout: 5m0s
   path: ./clusters/home/3-core-releases
   dependsOn:
-    - name: core
     - name: flux-repositories
   prune: true
   wait: true
