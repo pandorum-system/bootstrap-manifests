@@ -19,7 +19,7 @@ metadata:
   name: applications
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 5m0s
   path: ./clusters/home/6-applications
@@ -37,7 +37,7 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 5m0s
   path: ./clusters/home/5-infrastructure
@@ -55,7 +55,7 @@ metadata:
   name: releases
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 5m0s
   path: ./clusters/home/4-releases
@@ -73,7 +73,7 @@ metadata:
   name: core-releases
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 5m0s
   path: ./clusters/home/3-core-releases
@@ -91,7 +91,7 @@ metadata:
   name: flux-repositories
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 10m0s
   dependsOn:
@@ -109,7 +109,7 @@ metadata:
   name: core
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   retryInterval: 2m0s
   timeout: 3m0s
   path: ./clusters/home/1-core
